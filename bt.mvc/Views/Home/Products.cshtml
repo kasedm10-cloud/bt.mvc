@@ -1,0 +1,66 @@
+﻿@using bt.mvc.Models
+
+@{
+    var products = new List<Product>
+    {
+        new Product
+        {
+            Id = 1,
+            Name = "Laptop",
+            Price = 15000000
+        },
+
+        new Product
+        {
+            Id = 2,
+            Name = "Điện thoại",
+            Price = 8000000
+        },
+
+        new Product
+        {
+            Id = 3,
+            Name = "Chuột",
+            Price = 500000
+        },
+
+        new Product
+        {
+            Id = 4,
+            Name = "Bàn phím",
+            Price = 1000000
+        }
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Danh sách sản phẩm</title>
+</head>
+
+<body>
+
+    <h1>Danh sách sản phẩm</h1>
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>ID</th>
+            <th>Tên sản phẩm</th>
+            <th>Giá</th>
+        </tr>
+
+        @foreach (var product in products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.Name</td>
+                <td>@product.Price</td>
+            </tr>
+        }
+
+    </table>
+
+</body>
+</html>
